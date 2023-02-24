@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@300&display=swap');
+
+body
+{
+  margin:0px;
+  padding:0px;
+  font-family: 'Noto Serif Display', serif;
+}
+
+#weldiv
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height 100vh;
+  color: #ffff;
+}
+
+#wel
+{
+  position: relative;
+  color: #ffff;
+}
+
+#wel:before
+{
+  content: attr(data-text);
+  position: absolute;
+  color: #ff6d1f;
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  filter: drop-shadow(0 0 10px #ff691f) drop-shadow(0 0 50px #ff481f);
+  animation: type 6s infinite
+}
+
+@keyframes type
+{
+  0%,10%,100%
+  {
+    width: 0;
+  }
+  70%,80%
+  {
+    width: 100%;
+  }
+}
